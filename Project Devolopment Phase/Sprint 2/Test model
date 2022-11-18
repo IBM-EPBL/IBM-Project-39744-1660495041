@@ -1,0 +1,11 @@
+import numpy as np 
+import pandas as pd 
+import joblib
+In [2]:
+loaded_model = joblib.load('power_prediction.sav')
+In [3]:
+#X = [['Theoretical_Power_Curve (KWh)','WindSpeed(m/s)']]
+print(loaded_model.predict([[416.328907824861,5.31133604049682]])[0],"KWh")
+
+#predicted value is ['ActivePower(kW)']
+348.19165981990403 KWh
